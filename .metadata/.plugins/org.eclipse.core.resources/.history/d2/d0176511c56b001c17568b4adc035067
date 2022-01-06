@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex09Join</title>
+</head>
+<body>
+	<form action="Join" method="post">
+		<table width="200px">
+			<tr>
+				<td width="50px">ID</td>
+				<td><input type="text" name="user-id"></td>
+			</tr>
+			<tr>
+				<td>PW <input type="password" name="user-pw"></td>
+			</tr>
+			<tr>
+				<td>NAME <input type="text" name="user-name"></td>
+			</tr>
+			<tr>
+				<td>EMAIL <input type="text" name="user-email"></td>
+			</tr>
+			<tr>
+				<td>TEL <input type="text" name="user-tel"></td>
+			</tr>
+			<tr>
+				<td>GENDER</td>
+				<td>
+					MAN<input type="radio" name="gender" value="남자">
+					WOMEN<input type="radio" name="gender" value="여자">
+				</td>
+			</tr>
+			<tr>
+				<td>HOBBY</td> 
+				<td>
+					SPORT<input type="checkbox" name="food" value="sport">
+					STUDY<input type="checkbox" name="food" value="study">
+					EATING<input type="checkbox" name="food" value="eating">
+				</td>
+			</tr>
+			<tr>
+				<td>BRITHDAY</td>
+				<td><input type="date"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="전송"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<%@page import="java.util.Random"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%!
+		Random random = new Random();
+	%>
+	<%
+		
+	
+	%>
+	<table>
+		<tr>
+			<td>
+				주제:
+			</td>
+		</tr>
+		<tr>
+			<td>
+				아이템1:
+			</td>
+			<td>
+				<input type="text" name="sub">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				아이템2:
+			</td>
+			<td>
+				<input type="text" name="item1">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				아이템3:
+			</td>
+			<td>
+				<input type="text" name="item2">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="item3">
+			</td>
+		</tr>
+			
+	
+	</table>
+</body>
+</html>

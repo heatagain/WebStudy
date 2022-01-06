@@ -1,0 +1,23 @@
+package com.smhrd.servlet1229;
+
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Ex02Response")
+public class Ex02Response extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//response(응답객체) : 사용자에게 요청결과를 보내줄 때 사용하는 객체
+		//응답데이터 : HTML와 같은 문서, 이미지, 파일 형태 등
+		
+		
+	}
+
+}

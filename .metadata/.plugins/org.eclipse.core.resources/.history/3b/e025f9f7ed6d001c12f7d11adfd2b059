@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+		<%
+		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+		int java = Integer.parseInt(request.getParameter("java"));
+		int web = Integer.parseInt(request.getParameter("web"));
+		int iot = Integer.parseInt(request.getParameter("iot"));
+		int android = Integer.parseInt(request.getParameter("android"));
+		
+		int sum = java + web + iot + android;
+		float avg = sum / 4;
+		String grade =""; 
+		if(avg >= 95){
+			grade = "A+";
+		}
+		else if(avg >= 85){
+			grade = "A";
+		}
+		else if(avg >= 80){
+			grade = "B+";
+		}
+		else if(avg >= 70){
+			grade = "C";
+		}
+		else {
+			grade = "F";
+		}
+		
+		out.print("<table>");
+		 out.print("<tr>");
+		 out.print("<td>이름</td>");
+		 out.print("<td>"+ name +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>JAVA점수</td>");
+		 out.print("<td>"+ java +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>WEB점수</td>");
+		 out.print("<td>"+ web +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>IOT점수</td>");
+		 out.print("<td>"+ iot +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>ANDROID점수</td>");
+		 out.print("<td>"+ android +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>평균</td>");
+		 out.print("<td>"+ avg +"</td>");
+		 out.print("</tr>");
+		 out.print("<tr>");
+		 out.print("<td>학점</td>");
+		 out.print("<td><h3>"+ grade +"</h3></td>");
+		 out.print("</tr>");
+		out.print("</table>");
+		
+%>
+</body>
+</html>

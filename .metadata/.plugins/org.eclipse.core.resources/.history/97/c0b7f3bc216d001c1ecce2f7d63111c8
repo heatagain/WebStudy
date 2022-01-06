@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 선언문 : 필드(멤버변수, 전역변수)나 메소드를 만들 때 사용함 -->
+	<%!
+		int myNumber1 = 100;
+	%>
+	<%
+		int myNumber2 = 100;
+	%>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex08UserInfo</title>
+</head>
+<body>
+	<h1>여러 개의 값을 서버로 전송하기!</h1>
+	
+	<form action="" method="post">
+		좋아하는 음식을 선택해주세요<br>
+		제육볶음<input type="checkbox" name="food"><br>
+		연어초밥<input type="checkbox" name="food"><br>
+		치즈라면<input type="checkbox" name="food"><br>
+		
+		
+		<input type="submit" value="완료">
+	</form>
+	
+</body>
+</html>

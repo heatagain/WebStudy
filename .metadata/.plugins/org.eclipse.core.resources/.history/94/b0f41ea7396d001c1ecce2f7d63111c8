@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table action = "ex09maketable.jsp" method = "post">
+		<tr>
+			<td> 몇개의 층을 만드실건가요 </td>
+		</tr>
+		<tr>
+			<td> 층<input type = "text" name = "floor"> </td>
+		</tr>
+		<tr>
+			<td> 몇개의 방을 만드실건가요 </td>
+		</tr>
+		<tr>
+			<td> 방<input type = "text" name = "room"> </td>
+		</tr>
+		<input type="submit" name="전송">
+	</table>
+
+</body>
+</html>
