@@ -1,6 +1,9 @@
 package com.pattern;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	// Map<key타입, value타입>
+	// Key타입 -> String지정 why? 사용자의 요청이 들어오면 식별값으로 "/insert.do"와 같은 식별값을 활용해서 구분
+	// "/insert.do" 요청이 들어오면 InsertService객체가 생성
+	// "/update.do" 요청이 들어오면 UpdateService객체가 생성
+	private Map<String, Command> map;
+	
+	@Override
+	public void init() throws ServletException {
+		map = new HashMap<String, Command>();
+		
+		// map.put(요청식별값, 식별값과 연관된 객체);
+		map.put("/insert.do", new InsertService());
+		map.put("/update.do", new UpdateService());
+		map.put("/delete.do", new DeleteService());
+		map.put("/select.do", new SelectService());
+	}
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// FrontController 패턴
@@ -46,27 +65,30 @@ public class FrontController extends HttpServlet {
 		
 		System.out.println("요청 식별값 >> " + command);
 		
-		if(command.equals("/insert.do")) {
-			// 데이터 추가
-			InsertService insert = new InsertService();
-			insert.execute(request, response);
-			
-		} else if (command.equals("/update.do")) {
-			// 데이터 수정
-			UpdateService update = new UpdateService();
-			update.execute(request, response);
-			
-		} else if (command.equals("/delete.do")) {
-			// 데이터 삭제
-			DeleteService delete = new DeleteService();
-			delete.execute(request, response);
-			
-		} else if (command.equals("/select.do")) {
-			// 데이터 조회
-			SelectService select = new SelectService();
-			select.execute(request, response);
-			
-		}
+		Command com = map.get(command);
+		com.execute(request, response);
+		
+//		if(command.equals("/insert.do")) {
+//			// 데이터 추가
+//			Command insert = new InsertService();
+//			insert.execute(request, response);
+//			
+//		} else if (command.equals("/update.do")) {
+//			// 데이터 수정
+//			Command update = new UpdateService();
+//			update.execute(request, response);
+//			
+//		} else if (command.equals("/delete.do")) {
+//			// 데이터 삭제
+//			Command delete = new DeleteService();
+//			delete.execute(request, response);
+//			
+//		} else if (command.equals("/select.do")) {
+//			// 데이터 조회
+//			Command select = new SelectService();
+//			select.execute(request, response);
+//			
+//		}
 		
 	}
 
