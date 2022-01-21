@@ -48,12 +48,24 @@ public class FrontController extends HttpServlet {
 		
 		if(command.equals("/insert.do")) {
 			// 데이터 추가
+			InsertService insert = new InsertService();
+			insert.execute(request, response);
+			
 		} else if (command.equals("/update.do")) {
 			// 데이터 수정
+			UpdateService update = new UpdateService();
+			update.execute(request, response);
+			
 		} else if (command.equals("/delete.do")) {
 			// 데이터 삭제
+			DeleteService delete = new DeleteService();
+			delete.execute(request, response);
+			
 		} else if (command.equals("/select.do")) {
 			// 데이터 조회
+			SelectService select = new SelectService();
+			select.execute(request, response);
+			
 		}
 		
 	}
