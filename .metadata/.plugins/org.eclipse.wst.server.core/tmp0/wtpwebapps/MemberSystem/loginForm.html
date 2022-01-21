@@ -5,9 +5,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- <style>
+		table{
+			border-collapse: collapse;
+		}
+		input[type='text']
+		input[type='passowrd']
+		border = 0;
+		}
+	
+	</style> -->
 	<h1>로그인 페이지</h1>
 	
-	<form action="" method="post">
+	<form action="LoginCheck.jsp" method="post">
 		<table border="1">
 			<tr>
 				<td>ID:</td>
@@ -20,6 +30,7 @@
 			<tr>
 				<td colspan = "2" align = "center">
 					<input type="submit" value="로그인">
+					<input type="button" value="회원가입" onclick="location.href='joinForm.html';">
 				</td>
 			</tr>
 		</table>
