@@ -37,13 +37,13 @@ public class UpdateCon extends HttpServlet {
 		
 		if(cnt > 0) {
 			session.setAttribute("member", new MemberDTO(email, pw, tel, address));
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("main_jstl.jsp");
 		}else {
 			response.setContentType("text/html; charset=utf-8");
 	         PrintWriter out = response.getWriter();
 	         out.print("<script>");
 	         out.print("alert('회원정보 수정 실패..!');");
-	         out.print("location.href='main.jsp';");
+	         out.print("location.href='main_jstl.jsp';");
 	         out.print("</script>");
 		}
 		

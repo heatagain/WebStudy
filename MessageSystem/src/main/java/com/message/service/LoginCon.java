@@ -31,7 +31,7 @@ public class LoginCon implements iCommand {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", member);
 			session.getAttribute(pw);
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("main_jstl.jsp");
 		}
 		
 		else {
@@ -41,7 +41,7 @@ public class LoginCon implements iCommand {
 	         PrintWriter out = response.getWriter();
 	         out.print("<script>");
 	         out.print("alert('로그인 실패..!');");
-	         out.print("location.href='main.jsp';");
+	         out.print("location.href='main_jstl.jsp';");
 	         out.print("</script>");
 			
 		}

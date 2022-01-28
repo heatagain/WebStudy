@@ -43,7 +43,7 @@ public class JoinCon implements iCommand {
 	         PrintWriter out = response.getWriter();
 	         out.print("<script>");
 	         out.print("alert('회원가입 실패..!');");
-	         out.print("location.href='main.jsp';");
+	         out.print("location.href='main_jstl.jsp';");
 	         out.print("</script>");
 		}
 

@@ -29,14 +29,14 @@ public class MsgDeleteAllCon extends HttpServlet {
 		int cnt = dao.messageDeleteAll(member.getM_email());
 		
 		if (cnt > 0) {
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("main_jstl.jsp");
 			
 		} else {
 			response.setContentType("text/html; charset=utf-8");
 	         PrintWriter out = response.getWriter();
 	         out.print("<script>");
 	         out.print("alert('메시지 전체삭제 실패..!');");
-	         out.print("location.href='main.jsp';");
+	         out.print("location.href='main_jstl.jsp';");
 	         out.print("</script>");
 		}
 		

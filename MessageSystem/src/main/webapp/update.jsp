@@ -22,7 +22,8 @@
 						<ul class="actions vertical">
 							<li><h5>회원정보수정</h5></li>
 								<form action="UpdateCon" method="post">
-									<li>접속한 Email : <%=member.getM_email() %></li>
+									<li>접속한 Email : ${member.m_email}</li>
+									<%-- <li>접속한 Email : <%=member.getM_email() %></li> --%>
 									<li><input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
 									<li><input type="text" name = "tel" placeholder="전화번호를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
 									<li><input type="text" name="address" placeholder="집주소를 입력하세요" style="width: 500px; margin: 0 auto;"></li>

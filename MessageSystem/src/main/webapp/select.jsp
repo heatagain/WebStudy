@@ -1,10 +1,11 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.message.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 1.request영역에 저장된 정보를 가져오시오. -->
-<%
+<%-- <%
 ArrayList<MemberDTO> members = (ArrayList<MemberDTO>)request.getAttribute("members");
-%>
+%> --%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -31,7 +32,23 @@ ArrayList<MemberDTO> members = (ArrayList<MemberDTO>)request.getAttribute("membe
 								<td>Address</td>							
 							</tr>
 							<!-- 2.모든 회원의 이메일(email),전화번호(tel),주소(address)를 출력하시오. -->
-							<%
+							<!-- EL & JSTL로 변환하기 (choose, when, otherwise, forEach -->
+							<c:choose>
+								<c:when test="${empty members}">
+									<tr><td colspan = "3">현재 가입된 회원이 없습니다.</td></tr>
+								</c:when>
+								<c:otherwise>
+									<c:forEach var="member" items="${members}">
+										<tr>
+											<td>${member.m_email}</td>
+											<td>${member.m_tel}</td>
+											<td>${member.m_address}</td>
+										</tr>
+									</c:forEach>
+								</c:otherwise>
+							</c:choose>
+							
+							<%-- <%
 								if(members.isEmpty()){
 									out.print("<tr><td colspan = '3'>현재 가입된 회원이 없습니다.</td></tr>");
 								}else{
@@ -43,7 +60,7 @@ ArrayList<MemberDTO> members = (ArrayList<MemberDTO>)request.getAttribute("membe
 										out.print("</tr>");
 									}
 								}
-							%>
+							%> --%>
 						</table>
 					</nav>		
 					<a href="main.jsp" class="button next scrolly">되돌아가기</a>	
