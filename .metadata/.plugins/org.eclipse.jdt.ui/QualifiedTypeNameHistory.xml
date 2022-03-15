@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
@@ -27,7 +26,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.pattern.InsertService"/>
     <fullyQualifiedTypeName name="com.pattern.UpdateService"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="WebtoonInfo"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
@@ -35,4 +33,26 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="model.BookDAO"/>
     <fullyQualifiedTypeName name="model.BookDTO"/>
+    <fullyQualifiedTypeName name="model.TsDAO"/>
+    <fullyQualifiedTypeName name="oracle.sql.json.OracleJsonObject"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="model.CfDAO"/>
+    <fullyQualifiedTypeName name="model.AccDAO"/>
+    <fullyQualifiedTypeName name="model.AccDTO"/>
+    <fullyQualifiedTypeName name="model.CfDTO"/>
+    <fullyQualifiedTypeName name="model.ResDAO"/>
+    <fullyQualifiedTypeName name="model.ResDTO"/>
+    <fullyQualifiedTypeName name="model.ParkDAO"/>
+    <fullyQualifiedTypeName name="model.ParkDTO"/>
+    <fullyQualifiedTypeName name="model.SeeDTO"/>
+    <fullyQualifiedTypeName name="model.CourseDAO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="model.CourseDTO"/>
+    <fullyQualifiedTypeName name="model.PreferenceDTO"/>
+    <fullyQualifiedTypeName name="model.RecommnedDTO"/>
+    <fullyQualifiedTypeName name="model.RecommendDAO"/>
+    <fullyQualifiedTypeName name="model.RecommendDTO"/>
+    <fullyQualifiedTypeName name="model.MemberDTO"/>
+    <fullyQualifiedTypeName name="model.VisitDAO"/>
+    <fullyQualifiedTypeName name="model.TsDTO"/>
 </qualifiedTypeNameHistroy>
